@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/68d3c4da02.js" crossorigin="anonymous"></script>
+    <title>Show Password Strength</title>
+    <link rel="stylesheet" href="strength.css" />
+  </head>
+  <body>
+    <section>
+      <div class="Password-Container">
+        <h1><span class="first-letter">P</span>assword <span class="Password-strength">Strength <i class="fa-solid fa-eye"></i></span> </h1>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+        <button class="submit"><i class="fa-solid fa-eye-slash"></i></button>
+        <p id="password-strength">Password is: <span id="strength"></span></p>
+      </div>
+    </section>
+  </body>
+  <script src="strength.js"></script>
+</html>

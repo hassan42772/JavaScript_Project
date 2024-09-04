@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background:url("https://i.pinimg.com/564x/62/48/03/624803bee204bc2b7761449dcc502821.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Password-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.048);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 400px;
+    margin: 0 50px;
+    position: relative;
+}
+.Password-Container h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.first-letter{
+    color: red;
+    font-size: 3rem;
+}
+.Password-strength{
+    color: red;
+    font-size: 2rem;
+}
+.Password-strength i{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.Password-Container input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.Password-Container button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    right: 22px;
+    top: 215px;
+    background-color: transparent;
+}
+
+
+.Password-Container button i{
+    color: black;
+    font-size: 1rem;
+}
+button i:hover{
+    color: red;
+}
+.Password-Container p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    display: none;
+}
+
+.Password-Container p span{
+    color: red;
+    font-size: 1.5rem;
+    margin-left:50px;
+
+}
+
