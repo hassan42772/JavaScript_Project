@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechIQ Smart Iot Farming</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assests/tech_iq_icon1.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Dashboard page -->
+    <div id="content">
+        <div id="navbar">
+            <p class="navbar-text">Overview</p>
+                <img src="./assests/navbar_new.png" alt="Navbar Image" class="navbar-image">
+            <div class="hamburger-menu" onclick="showSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+<script>
+    function logout() {
+       
+        sessionStorage.removeItem("isLoggedIn");
+        window.location.href = "sign_up_form.html";
+    }
+</script>
+    <!--! Side Bar  -->
+    <div id="sidebar">
+        <div class="logo">
+            <img src="./assests/tech_iq_icon1.png" alt="Logo">
+        </div>
+        <a href="#" id="btn1" class="btn">
+            <img src="./assests/dashboard_icon1.png" alt="Dashboard" style="width: 13px; "> Dashboard
+        </a>          
+        <a href="Farms.html" id="btn2" class="btn">
+            <img src="./assests/farm_logo1.png" alt="Farms" style="width: 15px; ">Farms
+        </a>
+        <a href="Heat_map.html" id="btn3" class="btn"></i>
+            <img src="./assests/Heat_map_logo.png" alt="Heat map" style="width: 15px; ">Heat Map
+        </a>
+        <a href="Statistics.html" id="btn4" class="btn"></i>
+            <img src="./assests/Statistics_logo.png" alt="Statistics" style="width: 15px; ">Statistics
+        </a>
+        <a href="#" id="btn5" class="btn"><i class="fas fa-chart-bar"></i>Weather</a>
+        <hr>
+        <a href="#" class="btn"><i class="fas fa-cog"></i>Settings</a>
+        <a href="#" class="btn logout" onclick="logout()">
+            <img src="./assests/Logout_logo.png" alt="Logout" style="width: 15px;">
+        Logout</a>
+    </div>
+    <!-- ! Main Container -->
+    <div class="main">
+        <div class="empty"></div>
+        <!--! Dashboard  -->
+        <div class="text">
+            <!-- ! First container -->
+            <div class="first_container">
+                <div class="first_part1">
+                    <!--! Data and Time container-->
+                    <div class="date_container">
+                        <div class="time"></div>
+                        <div class="evening"></div>
+                    </div>
+                    <!--! Update value container -->
+                    <div class="value">
+                        <div class="value1">
+                            <div class="value_heading">CONNECTED BOX</div>
+                            <div class="value_data"> 25 <span style="color: #EE3E30;">-15%</span><span><img src="./assests/down.png" alt="Logout" style="width: 16px; height: 16px;"></span></div>
+                            <div class="value_text">vs previous month </div>
+                        </div>
+                        <div class="value2">
+                            <div class="value_heading">ACTIVE BOX</div>
+                            <div class="value_data"> 25 <span style="color: #00FFA3; margin-right: 3px;" >-15%</span><span><img src="./assests/up.png" alt="Logout" style="width: 16px; height: 16px;"></span></div>
+                            <div class="value_text">vs previous month </div>
+                        </div>
+                        <div class="value3">
+                            <div class="value_heading">RECENT ALERTS</div>
+                            <div class="value_data"> 25 <span style="color: #EE3E30;">-15%</span><span><img src="./assests/down.png" alt="Logout" style="width: 16px; height: 16px;"></span></div>
+                            <div class="value_text">vs previous month </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ! Alert container -->
+                <div class="first_part2">
+                    <div class="alert">Alert</div>
+                    <div class="alert">
+                        <img src="./assests/alert_new.png" alt="Logout" style="width: 32px;height: 32px; margin-right: 14px;">
+                        Farm A has been disconnected</div>
+                        <div class="alert">
+                            <img src="./assests/alert_new.png" alt="Logout" style="width: 32px;height: 32px; margin-right: 14px;">
+                            Farm B has been disconnected</div>
+                </div>
+            </div>
+            <!-- ! Second container -->
+            <div class="second_container">
+                <!-- ! line chart -->
+                <div class="second_part1">
+                    <canvas id="myLineChart"></canvas>
+                </div>
+                <!-- ! Pie chart -->
+                <div class="second_part2">
+                    <div id="chartContainer" style="height: 300px; width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Dashboard.js"></script>
+<script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    (function() {
+           document.querySelector(".navbar-text").innerHTML = "Dashboard";
+       })();
+</script>
+</html>

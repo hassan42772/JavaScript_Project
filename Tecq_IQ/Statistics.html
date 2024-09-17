@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechIQ Smart Iot Farming</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="shortcut icon" href="./assests/tech_iq_icon1.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Dashboard page -->
+    <div id="content">
+        <div id="navbar">
+            <p class="navbar-text">Overview</p>
+            <img src="./assests/navbar_new.png" alt="Navbar Image" class="navbar-image">
+            <div class="hamburger-menu" onclick="showSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <!--! Side Bar  -->
+    <div id="sidebar">
+        <div class="logo">
+            <img src="./assests/tech_iq_icon1.png" alt="Logo">
+        </div>
+        <a href="Dashboard.html" id="btn1" class="btn">
+            <img src="./assests/dashboard_icon1.png" alt="Dashboard" style="width: 13px; "> Dashboard
+        </a>          
+        <a href="Farms.html" id="btn2" class="btn" >
+            <img src="./assests/farm_logo1.png" alt="Farms" style="width: 15px; ">Farms
+        </a>
+        <a href="Farms.html" id="btn3" class="btn"></i>
+            <img src="./assests/Heat_map_logo.png" alt="Heat map" style="width: 15px; ">Heat Map
+        </a>
+        <a href="#" id="btn4" class="btn"></i>
+            <img src="./assests/Statistics_logo.png" alt="Statistics" style="width: 15px; ">Statistics
+        </a>
+        <a href="Weather.html" id="btn5" class="btn"><i class="fas fa-chart-bar"></i>Weather</a>
+        <hr>
+        <a href="#" class="btn"><i class="fas fa-cog"></i>Settings</a>
+        <a href="#" class="btn logout"  onclick="logout()">
+            <img src="./assests/Logout_logo.png" alt="Logout" style="width: 15px;">
+        Logout</a>
+    </div>
+    <!-- ! Main Container -->
+    <div class="main">
+        <div class="empty"></div>
+        <div class="statistics">
+            <div class="static_container">
+                <div class="dashboard">
+                    <div class="dropdowns">
+                        <select id="farm-select">
+                            <option value="farmA">Farm A</option>
+                            <option value="farmB">Farm B</option>
+                            <option value="farmC">Farm C</option>
+                            <option value="farmD">Farm D</option>
+                        </select>
+                        <select id="month-select" style="margin-left:auto;">
+                            <option value="jan">January</option>
+                            <option value="feb">February</option>
+                            <option value="mar">March</option>
+                            <option value="apr">April</option>
+                            <option value="may">May</option>
+                            <option value="jun">June</option>
+                            <option value="jul">July</option>
+                            <option value="aug">August</option>
+                            <option value="sep">September</option>
+                            <option value="oct">October</option>
+                            <option value="nov">November</option>
+                            <option value="dec">December</option>
+                            <!-- Add more months as needed -->
+                        </select>
+                    </div>
+                    <div class="main-chart">
+                        <canvas id="mainChartCanvas"></canvas>
+                    </div>
+                    <!-- Placeholders for the smaller charts -->
+                    <div class="small-charts-container">
+                        <div class="small-chart">
+                            <canvas id="moistureChartCanvas"></canvas>
+                        </div>
+                        <div class="small-chart">
+                            <canvas id="temperatureChartCanvas"></canvas>
+                        </div>
+                        <div class="small-chart">
+                            <canvas id="phChartCanvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="farm-condition">
+                    <h2 style="color: #00357d;">Over Farm Condition</h2>
+                    <!-- You can add content here if needed -->
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+</body>
+<script src="Statistics.js"></script>
+
+<script>
+    function logout() {
+       
+        sessionStorage.removeItem("isLoggedIn");
+        window.location.href = "sign_up_form.html";
+    }
+</script>
+<script>
+    (function() {
+           document.querySelector(".navbar-text").innerHTML = "Statistics";
+       })();
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/iot.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./assests/tech_iq_icon1.png" type="image/x-icon">
+    <title>TechIQ Smart Iot Farming</title>
+</head>
+<body>
+<section>
+    <form action="#" method="post">
+        <div class="form_logo">
+            <img src="./assests/tech_iq_icon1.png" alt="" width="240px">
+        
+        </div>
+        
+        <input type="email" id="username" name="email"  placeholder="Username" required>
+        <br>
+
+        <input type="password" id="password" name="password"   placeholder="Password" required>
+        <br>
+
+        <button onclick="login()">Login</button>
+
+    </form>
+</section>
+</body>
+<script>
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    if (username == "admin" && password == "admin123") {
+        // Set a session storage item to indicate login
+        sessionStorage.setItem("isLoggedIn", "true");
+        window.location.href = "Dashboard.html";
+    } else {
+        alert("Login Failed! Incorrect username or password.");
+    }
+}
+</script>
+</html>

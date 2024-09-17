@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechIQ Smart Iot Farming</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assests/tech_iq_icon1.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Dashboard page -->
+    <div id="content">
+        <div id="navbar">
+            <p class="navbar-text">Overview</p>
+            <img src="./assests/navbar_new.png" alt="Navbar Image" class="navbar-image">
+            <div class="hamburger-menu" onclick="showSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <!--! Side Bar  -->
+    <div id="sidebar">
+        <div class="logo">
+            <img src="./assests/tech_iq_icon1.png" alt="Logo">
+        </div>
+        <a href="Dashboard.html" id="btn1" class="btn">
+            <img src="./assests/dashboard_icon1.png" alt="Dashboard" style="width: 13px; "> Dashboard
+        </a>          
+        <a href="#" id="btn2" class="btn" >
+            <img src="./assests/farm_logo1.png" alt="Farms" style="width: 15px; ">Farms
+        </a>
+        <a href="Heat_map.html" id="btn3" class="btn"></i>
+            <img src="./assests/Heat_map_logo.png" alt="Heat map" style="width: 15px; ">Heat Map
+        </a>
+        <a href="Statistics.html" id="btn4" class="btn"></i>
+            <img src="./assests/Statistics_logo.png" alt="Statistics" style="width: 15px; ">Statistics
+        </a>
+        <a href="#" id="btn5" class="btn"><i class="fas fa-chart-bar"></i>Weather</a>
+        <hr>
+        <a href="#" class="btn"><i class="fas fa-cog"></i>Settings</a>
+        <a href="#" class="btn logout"  onclick="logout()">
+            <img src="./assests/Logout_logo.png" alt="Logout" style="width: 15px;">
+        Logout</a>
+    </div>
+    <!-- ! Main Container -->
+    <div class="main">
+        <div class="empty"></div>
+        <div class="farm">
+            <div class="header">
+                <div><input type="checkbox" id="selectAll" onclick="selectAllFarms(this)"></div>
+                <div class="farm_heading">Name</div>
+                <div class="farm_heading">Location</div>
+                <div class="farm_heading">Device Status</div>
+                <div class="farm_heading">Subscription Status</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm A</div>
+                <div class="farm_heading2">Lusaka</div>
+                <div class="farm_heading2">Online</div>
+                <div class="farm_heading2">Expired</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+            <div class="row" onclick="toggleSelection(this, event)">
+                <input type="checkbox" name="farm">
+                <div class="farm_heading2">Farm B</div>
+                <div class="farm_heading2">Copperbelt</div>
+                <div class="farm_heading2">Offline</div>
+                <div class="farm_heading2">Active</div>
+            </div>
+    </div>
+    </div>
+</body>
+<script src="Farms.js"></script>
+<script>
+    function logout() {
+       
+        sessionStorage.removeItem("isLoggedIn");
+        window.location.href = "sign_up_form.html";
+    }
+</script>
+<script>
+     (function() {
+            document.querySelector(".navbar-text").innerHTML = "Farms";
+        })();
+</script>
+</html>

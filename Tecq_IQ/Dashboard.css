@@ -1,0 +1,831 @@
+/*! sidebar  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #001529;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#sidebar.hidden {
+    transform: translateX(-250px);
+}
+
+#sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sidebar .logo img {
+    width: 137px;
+    height: auto;
+}
+
+#sidebar .btn {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 6px;
+    color: #fff;
+    text-decoration: none;
+}
+#sidebar .btn img {
+    margin-right: 5px;
+}
+
+#sidebar .btn:hover {
+    background-color: #679BF133;
+    border-radius: 10px;
+}
+
+
+#sidebar .logout {
+    position: absolute;
+    margin: 0 49px;
+    bottom: 10px; 
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 60%;
+}
+
+
+#sidebar .btn i {
+    margin-right: 8px;
+    /* Adjust the margin as needed */
+}
+
+#sidebar .btn span {
+    display: inline-block;
+    margin-left: 5px;
+    /* Adjust the margin as needed */
+}
+
+#sidebar hr {
+    width: 80%;
+    margin: 10px auto;
+}
+/* ! main container */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/*!  text container */
+.text{
+    font-size: 30px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+   
+}
+.first_container{
+   
+    width: 100%;
+    height: calc(100vh - 60%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+   
+}
+.second_container{
+   
+    width: 100%;
+    height: calc(100vh - 40%);
+   
+}
+.first_part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+   
+}
+.first_part2{
+    background-color: #fff;
+    align-items: center;
+    width: 38%;
+    margin-left: 10px;
+    /* margin-right: 10px; */
+    height: 95%;
+    border-radius: 10px;
+    padding-left: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.alert{
+    width: 90%;
+    height: 25%;
+    margin-top:5px ;
+    background-color: #dadadaa8;
+    border-radius: 10px;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: #1B2C4166;
+    
+    
+}
+.alert:nth-child(1){
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'roboto', sans-serif;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+
+
+}
+.date_container{
+    width: 100%;
+    height: 43%;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+
+}
+.time{
+    text-align: start;
+    padding-left:10px;
+    width: 100%;
+    height: 30%;
+    font-size: 12px;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    color: #15192080;
+    
+}
+.evening{
+    height: 70%;
+    text-align: start;
+    width: 100%;
+    padding-left:13px;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 12px;
+    color: #15192080;
+
+}
+.value{
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+.value1{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+     width: 30%;
+    height: 85%;
+}
+.value_heading{
+    width: 90%;
+    height: 20%;
+    
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px;
+}
+.value_data{
+    width: 90%;
+    height: 20%;
+    font-weight: 500;
+    
+    font-size: 16px;
+    margin: 5px;
+
+
+    
+}
+.value_text{
+    width: 90%;
+    height: 20%;
+    
+    font-size: 14px;
+    margin: 5px;
+
+
+}
+.value2{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+}
+.value3{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 85%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+}
+.second_container{
+display: flex;
+flex-direction: row;
+display: flex;
+justify-content: center;
+align-items: center;
+/* margin-left: 10px; */
+}
+.second_part1{
+
+width: 55%;
+height: 90%;
+margin: 10px;
+background-color: #fff;
+border-radius: 10px;
+padding: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+}
+.second_part2{
+margin: 5px;
+border-radius: 10px;
+background-color: #fff;
+width: 38%;
+height: 90%;
+display: flex;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.status{
+width: 50%;
+aspect-ratio: 1;
+background-color: green;
+border-radius:50% ;
+
+}
+.status_checker{
+width: 90%;
+height: 10%;
+border: 1px solid red;
+margin-top: 5px;
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .main{
+        height: auto;
+    }
+    .text {
+        font-size: 10px;
+        padding: 10px;
+        height: auto;
+        /* margin-right: 10px; */
+      
+
+    }
+    .first_container {
+        flex-direction: column;
+        margin-top: 0;
+
+    }
+    .first_part1{
+        width: 100%;
+        /* margin: 5px; */
+    }
+    .first_part2 {
+        width: 100%;
+    padding-left: 55px;
+    padding-bottom: 20px;
+    height: 100%;
+    margin-left: 0;
+
+    /* margin-bottom: 5px; */
+
+    }
+    .second_container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+
+    }
+    .second_part1,
+    .second_part2 {
+        width: 100%;
+        margin: 5px;
+
+    }
+    .alert{
+        font-size: 12px;
+        
+    }
+    .alert:nth-child(1){
+        background-color: #fff;
+        font-size: 14px;
+    }
+    .value{
+        width: 100%;
+        height: 100%;
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 10px;
+    }
+    .value1{
+        width: 30%;
+    height: 100%;
+    }
+    .value2{
+        width: 30%;
+    height: 100%;
+    }
+    .value3{
+        width: 30%;
+        height: 100%;
+    }
+    .value_text{
+        width: 90%;
+        height: 20%;
+        font-size: 10px;
+        margin: 5px;
+    }
+    .value_heading{
+        width: 90%;
+        height: 20%;
+        font-size: 6px;
+        margin: 5px;
+    }
+    .value_data{
+        width: 90%;
+        height: 20%;
+        font-size:10px ;
+    }
+   
+}
+
+
+
+/* ! empty container */
+.empty{
+    width:310px;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+
+/* ! navbar */
+
+#navbar {
+    background-color: #001529;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-text {
+    margin-left: 300px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar-image {
+    width: 52.11px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1100px) {
+    #navbar{
+        width: 100%;
+    }
+    .navbar-text {
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+    
+}
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    #sidebar {
+        width: 180px;
+        height: 100vh;
+        position: fixed;
+        /* padding-top: 100px; */
+        display: none;
+        
+       
+    }
+    .empty{
+        display: none;
+    }
+    #sidebar.hidden {
+        transform: translateX(-250px);
+    }
+}
+
+
+/* farm */
+
+.farm{
+    font-size: 30px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    margin-left: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+  .header, .row {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr); /* Five columns: checkbox and four equal columns */
+    padding: 8px 16px;
+    align-items: center;
+  }
+  
+  .header {
+    background-color: #f0f0f0;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: left;
+  }
+  
+  .header > div {
+    justify-self: start; /* Align header items to the start (left) */
+  }
+  
+  .header > div:first-child {
+    justify-self: center; /* Center the checkbox header */
+  }
+  
+  .row {
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+  }
+  
+  .row.selected {
+    background-color: #dae8f1; /* The light blue background for selected rows */
+  }
+  
+  .row:nth-child(even):not(.selected) {
+    background-color: #f9f9f9; /* Slightly different background for even rows */
+  }
+  
+  .row:last-child {
+    border-bottom: none;
+  }
+  
+  .row > div {
+    justify-self: start; /* Align row items to the start (left) */
+    padding: 8px;
+  }
+  
+  .row > div:first-child {
+    justify-self: center; /* Center the checkbox in the row */
+  }
+  
+  .row > div:nth-child(3), /* Device Status column */
+  .row > div:nth-child(4) { /* Subscription Status column */
+    text-align: center; /* Center the content for these columns */
+  }
+  
+  /* Custom checkbox styling */
+  input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer; /* Pointer cursor on hover over the checkbox */
+  }
+  .farm_heading{
+    font-size: 20px;
+  }
+  .farm_heading2{
+    font-size: 16px;
+  }
+  @media (max-width: 500px) {
+    .header, .row {
+      grid-template-columns: 10px repeat(4, 60px); /* Adjust for smaller screen */
+    }
+    
+    .farm_heading, .farm_heading2 {
+      font-size: 10px; /* Adjust font size */
+    }
+  }
+
+  /*  heat map */
+
+  .heat_map {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    text-align: center;
+    
+}
+
+#map_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+}
+
+#map {
+    flex-grow: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#filter-panel {
+    width: 20%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.filter {
+    margin-bottom: 1em;
+}
+
+.filter label {
+    display: block;
+}
+
+.filter select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #map_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map, #filter-panel {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #map {
+        order: 2;
+    }
+}
+
+  
+  /* Further adjustments for very small screens */
+  @media (max-width: 480px) {
+      .filter select, .filter label {
+          font-size: 14px; /* Adjust font size for better readability on small screens */
+      }
+  }
+
+/* Statistics */
+.static_container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding: 20px; 
+    gap: 50px;
+}
+
+.dashboard {
+    flex-grow: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between; /* This will place the dropdowns at each end */
+    width: 100%; /* Ensure the container spans the full width */
+    margin-bottom: 20px; /* Space between dropdowns and the chart */
+}
+
+#farm-select, #month-select {
+    /* Style your selects here. Example: */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main-chart {
+    margin-bottom: 20px;
+    
+}
+
+.small-charts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.small-chart {
+    flex: 1; /* Each chart will take up equal space */
+    padding: 10px; /* Add padding if needed */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc((80% - 2 * 20px) / 3);
+}
+
+/* ... other styles ... */
+
+.farm-condition {
+    width: 20%; /* Adjust the width as needed */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.farm-condition h2 {
+    width: 100%;
+    text-align: center; /* Center the heading text */
+    margin: 0 0 20px 0; /* Add some space below the heading */
+    color: #333;
+}
+
+/* ... other styles ... */
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .static_container {
+        flex-direction: column;
+    }
+
+    .dashboard, .farm-condition {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .farm-condition {
+        order: -1; /* This will move the condition section above the charts on smaller screens */
+    }
+    .small-charts-container {
+        flex-direction: column;
+    }
+
+    .small-chart {
+        width: 100%;
+        margin-bottom: 20px;
+}
+}
+/* weathers */
+
+.switch-container {
+    padding: 20px;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+}
+/* Basic switch styling */
+.switch {
+    position: relative;
+    display: flex; /* Use flex to center the label text */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 10px; /* Space out switches */
+    width: 100px; /* Adjust width as needed */
+    height: 34px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    display: flex;
+    justify-content: space-between; /* Align the texts to each end */
+    align-items: center; /* Center the texts vertically */
+    color: white;
+    padding: 0 10px; /* Add some padding for the texts */
+    border-radius: 34px; /* Rounded sliders */
+}
+.slider:before {
+    content: "OFF"; /* Default text */
+    position: absolute;
+    left: 10px; /* Position the text inside the slider */
+}
+.slider:after {
+    content: "ON"; /* Text for the "ON" state */
+    position: absolute;
+    right: 10px; /* Position the text inside the slider */
+    opacity: 0; /* Hide it initially */
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    opacity: 0; /* Hide the "OFF" text when checked */
+}
+input:checked + .slider:after {
+    opacity: 1; /* Show the "ON" text when checked */
+}
+.switch_main{
+    display: flex;
+    justify-content: center;
+
+}
+h2{
+    text-align: center;
+}
