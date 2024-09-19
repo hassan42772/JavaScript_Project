@@ -1,3 +1,4 @@
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 section {
     max-width: 100vw;
     min-height: 100vh;
-    background:url(images/background.jpg);
+    background: url(images/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,87 +19,27 @@ section {
     overflow: hidden;
 }
 
-.main-container1 {
+/* Main containers animations */
+.main-container1, .main-container2, .main-container3, 
+.main-container4, .main-container5, .main-container6, 
+.main-container7, .main-container8, .main-container9 {
     border-radius: 50%;
     background: transparent;
     outline: none;
     border: none;
     position: relative;
-    animation: moveDown 5s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container2 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 3s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container3 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 5.2s infinite ease-in-out; /* Apply animation */
+    animation: moveDown 5s infinite ease-in-out;
     animation-play-state: running;
 }
-.main-container4 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 5s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container5 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 5.4s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container6 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 3s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container7 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 4s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container8 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 3.6s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
-.main-container9 {
-    border-radius: 50%;
-    background: transparent;
-    outline: none;
-    border: none;
-    position: relative;
-    animation: moveDown 3s infinite ease-in-out; /* Apply animation */
-     animation-play-state: running;
-}
+
+/* Individual timing for animations */
+.main-container2 { animation-duration: 3s; }
+.main-container3 { animation-duration: 5.2s; }
+.main-container5 { animation-duration: 5.4s; }
+.main-container6 { animation-duration: 3s; }
+.main-container7 { animation-duration: 4s; }
+.main-container8 { animation-duration: 3.6s; }
+.main-container9 { animation-duration: 3s; }
 
 /* Keyframes for the animation */
 @keyframes moveDown {
@@ -110,42 +51,119 @@ section {
     }
 }
 
-.newdiv{
+/* Styles for the floating box */
+.newdiv {
     position: absolute;
     top: 10%;
-    left: 36%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 30%;
-    height: 50%;
+    height: auto;
     background: white;
     border-radius: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-.newdiv h1{
+
+/* Text and button styling */
+.newdiv h1 {
     text-align: center;
-    padding-top: 10%;
-    font-size: 2.5em;
+    font-size: 2rem;
     color: black;
+    margin: 20px 0;
 }
-.newdiv button{
+
+.newdiv button {
     padding: 10px 20px;
     background: #f1356d;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1rem;
     margin-top: 20px;
 }
-.newdiv button:hover{
+
+.newdiv button:hover {
     background: #ca9caa00;
     color: black;
     border: 1px solid black;
 }
-.newdiv p{
+
+.newdiv p {
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     color: black;
+    text-align: center;
+}
+
+/* Responsive Styles */
+
+/* For small devices (phones) */
+@media (max-width: 768px) {
+    section {
+        justify-content: space-between;
+        
+    }
+
+    .newdiv {
+        width: 80%;
+        top: 5%;
+        height: auto;
+    }
+
+    .newdiv h1 {
+        font-size: 1.5rem;
+    }
+
+    .newdiv button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .newdiv p {
+        font-size: 1rem;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .newdiv {
+        width: 50%;
+        top: 8%;
+    }
+
+    .newdiv h1 {
+        font-size: 2rem;
+    }
+
+    .newdiv button {
+        font-size: 1.1rem;
+    }
+
+    .newdiv p {
+        font-size: 1.2rem;
+    }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1024px) {
+    .newdiv {
+        width: 30%;
+    }
+
+    .newdiv h1 {
+        font-size: 2.5rem;
+    }
+
+    .newdiv button {
+        font-size: 1.2rem;
+    }
+
+    .newdiv p {
+        font-size: 1.5rem;
+    }
 }
