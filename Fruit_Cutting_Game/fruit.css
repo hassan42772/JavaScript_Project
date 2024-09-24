@@ -6,7 +6,7 @@
 }
 
 section {
-    max-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     background: url(images/background.jpg);
     background-size: cover;
@@ -167,10 +167,29 @@ section {
         font-size: 1.5rem;
     }
 }
+
 @media (width < 500px) {
     section {
         justify-content: space-between;
-        
+        width:400px;
+    }
+    .main-container4{
+        display: none;
+    }
+    .main-container5{
+        display: none;
+    }
+    .main-container6{
+        display: none;
+    }
+    .main-container7{
+        display: none;
+    }
+    .main-container8{
+        display: none;
+    }
+    .main-container9{
+        display: none;
     }
 
     .newdiv {
