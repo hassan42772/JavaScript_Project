@@ -91,3 +91,34 @@ button i:hover{
 
 }
 
+@media screen and (max-width: 768px){
+
+    .Password-Container button{
+        right: 17px;
+        top: 206px;
+    }
+    .Password-Container h1{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+    .first-letter{
+        color: red;
+        font-size: 2rem;
+    }
+    .Password-strength{
+        color: red;
+        font-size: 1.5rem;
+    }
+    .Password-strength i{
+        color: red;
+        font-size: 1rem;
+    }
+    .Password-Container p span{
+        color: red;
+        font-size: 1rem;
+        margin-left:50px;
+    
+    }
+    
+}
