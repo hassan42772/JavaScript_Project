@@ -24,8 +24,9 @@ section{
     margin-top: 20px;
     width: 30%;
     height: 30%;
-    background-color:#a409f156;
+    background-color: #a409f156;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .weekday-day{
@@ -36,7 +37,7 @@ section{
     width: 100%;
     height: 100%;
     background-color: #a409f188;
-    border:1px solid #fff; 
+    border: 1px solid #fff; 
     border-radius: 14px;
 }
 .weekday-day span{
@@ -57,7 +58,6 @@ section{
     height: 10%;
     font-size: 25px;
     font-weight: 600;
-  
 }
 hr{
     width: 70%;
@@ -72,18 +72,94 @@ hr{
     width: 100%;
     height: 100%;
     gap: 10px;
-    
 }
 .month-year span{
     font-size: 20px;
     font-weight: 600;
     color: #fff;
 }
-
 .month-year span:nth-child(1){
     font-size: 34px;
     color: orange;
 }
 .month-year span:nth-child(2){
     font-size: 24px;
+}
+
+/* Responsive Styles */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+    .date-container {
+        width: 40%;
+        height: 35%;
+    }
+
+    .weekday-day span:nth-child(1) {
+        font-size: 60px;
+    }
+
+    .weekday-day .weekday {
+        font-size: 20px;
+    }
+
+    .month-year span:nth-child(1) {
+        font-size: 30px;
+    }
+
+    .month-year span:nth-child(2) {
+        font-size: 20px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+    .date-container {
+        width: 60%;
+        height: 40%;
+    }
+
+    .weekday-day span:nth-child(1) {
+        font-size: 50px;
+    }
+
+    .weekday-day .weekday {
+        font-size: 18px;
+    }
+
+    .month-year span:nth-child(1) {
+        font-size: 28px;
+    }
+
+    .month-year span:nth-child(2) {
+        font-size: 18px;
+    }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+    .date-container {
+        width: 80%;
+        height: 50%;
+    }
+
+    .weekday-day span:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .weekday-day .weekday {
+        font-size: 16px;
+    }
+
+    .month-year span:nth-child(1) {
+        font-size: 24px;
+    }
+
+    .month-year span:nth-child(2) {
+        font-size: 16px;
+    }
+
+    hr {
+        width: 90%;
+    }
 }
