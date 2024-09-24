@@ -11,12 +11,12 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    background: #E0EAFC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -31,16 +31,15 @@ h1 {
     align-items: center;
     width: 50%;
     min-height: 80vh;
-   
+
     border-radius: 10px;
     background: url(Stopwatch.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
 }
 
-.MainContainer p{
+.MainContainer p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,16 +51,17 @@ h1 {
     font-weight: bold;
     color: #fff;
     background-color: black;
-    /* margin-bottom: 1rem; */
     margin-top: 2rem;
 }
-.button_container{
+
+.button_container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-.button_container button{
+
+.button_container button {
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     font-size: 1rem;
@@ -73,8 +73,58 @@ h1 {
     cursor: pointer;
 }
 
-
-button:active{
+button:active {
     background-color: #00000048;
     color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .MainContainer {
+        width: 70%; /* Reduce container width for medium screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 768px) {
+    .MainContainer {
+        width: 90%; /* Further reduce container width for tablets */
+    }
+
+    h1 {
+        font-size: 2rem; /* Further adjust heading size */
+    }
+
+    .MainContainer p {
+        width: 30%; /* Increase width for paragraph to take more space */
+        font-size: 1.5rem; /* Adjust paragraph font size */
+    }
+
+    .button_container button {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Decrease heading size for mobile */
+        margin-bottom: 1rem; /* Adjust margin for mobile */
+    }
+
+    .MainContainer {
+        min-height: 60vh; /* Reduce height for mobile devices */
+    }
+
+    .MainContainer p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+        width: 30%; /* Use more width for mobile */
+    }
+
+    .button_container button {
+        padding: 0.1rem 0.3rem; /* Adjust button padding for mobile */
+        font-size: 0.8rem; /* Adjust button font size */
+    }
 }
