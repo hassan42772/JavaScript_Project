@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(1305985.jpeg);
     background-size: cover;
@@ -13,21 +13,21 @@ body{
     background-position: center;
     min-height: 100vh;
     width: 100%;
-
 }
-h1{
+
+h1 {
     text-align: center;
     margin: 2rem 0;
     color: #fff;
-
     font-size: 3rem;
     font-weight: 600;
 }
-h1 span{
+
+h1 span {
     color: #ff0000;
 }
 
-form{
+form {
     width: 50%;
     height: 5rem;
     display: flex;
@@ -38,7 +38,8 @@ form{
     padding: 1rem;
     border-radius: 15px;
 }
-form input{
+
+form input {
     padding: 0.5rem;
     width: 80%;
     height: 3rem;
@@ -49,16 +50,16 @@ form input{
     font-weight: 600;
     color: rgba(0, 0, 0, 0.539);
     padding-left: 20px;
-
 }
 
-input::placeholder{
+input::placeholder {
     font-size: 1rem;
     font-weight: 600;
     color: #3333334f;
     padding-left: 20px;
 }
-form button{
+
+form button {
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 15px;
@@ -67,7 +68,8 @@ form button{
     cursor: pointer;
     margin-left: 1rem;
 }
-.search-img{
+
+.search-img {
     width: 80%;
     margin: 2rem auto;
     display: grid;
@@ -76,7 +78,8 @@ form button{
     justify-content: center;
     align-items: center;
 }
-.search-img img{
+
+.search-img img {
     width: 100%;
     height: 250px;
     border-radius: 15px;
@@ -84,13 +87,13 @@ form button{
     transition: 0.3s;
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.show-more-btn{
+.show-more-btn {
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 15px;
@@ -98,8 +101,8 @@ form button{
     color: #fff;
     cursor: pointer;
     display: none;
-    
 }
+
 .image-container {
     position: relative;
     display: inline-block;
@@ -108,15 +111,78 @@ form button{
 
 .download-btn {
     position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    bottom: 10px;
+    right: 10px;
     background: transparent;
     border: none;
-    color: #fff; /* Or another color */
+    color: #fff;
     cursor: pointer;
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 1.5rem;
 }
+
 .download-btn:hover {
     color: #ff0000;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        width: 70%;
+    }
+
+    .search-img {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-img img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    form input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    form button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .search-img {
+        grid-template-columns: 1fr;
+    }
+
+    .search-img img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-img img {
+        height: 150px;
+    }
+
+    .download-btn {
+        font-size: 1.2rem;
+    }
+}
