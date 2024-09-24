@@ -66,3 +66,20 @@ button{
     border-radius: 10px;
     margin: 10px;
 }
+
+@media screen and (max-width: 768px){
+    .Main h1{
+        font-size: 30px;
+    }
+    .gallery span img{
+        width: 150px;
+    }
+    span{
+        width: 150px;
+    }
+    button img{
+        width: 30px;
+        height: 30px;
+    }
+    
+}
