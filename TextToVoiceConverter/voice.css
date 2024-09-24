@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@ section{
     background-repeat: no-repeat;
 }
 
-.Main-container{
+.Main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,16 +23,18 @@ section{
     width: 100%;
     height: 100vh;
 }
-.Main-container h1{
+
+.Main-container h1 {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 1rem;
 }
-.Main-container h1 span{
+
+.Main-container h1 span {
     color: #f00;
 }
 
-.Main-container textarea{
+.Main-container textarea {
     width: 60%;
     height: 15rem;
     margin: 1rem 0;
@@ -43,17 +45,16 @@ section{
     border-radius: 25px;
     outline: none;
     color: white;
-
-}
-.btn-container{
-   width: 60%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-  
 }
 
-.btn-container select{
+.btn-container {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container select {
     width: 75%;
     padding: 0.7rem;
     font-size: 1.2rem;
@@ -65,20 +66,18 @@ section{
     appearance: none;
     background: url("dropdown.png");
     background-position-x: calc(100% - 20px);
-    background-position-y: calc(50% - 3px); ;
+    background-position-y: calc(50% - 3px);
     background-repeat: no-repeat;
     background-size: 17px;
     cursor: pointer;
     text-align: center;
-    
 }
 
-select option{
+select option {
     background-color: #000;
     color: white;
     font-size: 1.2rem;
     padding: 0.7rem;
-
     border: 2px solid #f00;
     border-radius: 2px;
     appearance: none;
@@ -86,7 +85,7 @@ select option{
     cursor: pointer;
 }
 
-.btn-container button{
+.btn-container button {
     width: 20%;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
@@ -97,7 +96,61 @@ select option{
     color: #fff;
     cursor: pointer;
 }
-.btn-container button:hover{
+
+.btn-container button:hover {
     background: transparent;
     color: #f00;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .Main-container h1 {
+        font-size: 2rem; /* Adjust heading size for medium screens */
+    }
+
+    .Main-container textarea,
+    .btn-container select {
+        width: 80%; /* Increase width for textarea and select */
+    }
+}
+
+@media (max-width: 768px) {
+    .Main-container h1 {
+        font-size: 1.75rem; /* Further adjust heading size */
+    }
+
+    .Main-container textarea {
+        height: 10rem; /* Reduce height of textarea */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: stretch; /* Stretch button to fill container */
+    }
+
+    .btn-container button {
+        width: 100%; /* Full width buttons */
+        margin: 0.5rem 0; /* Add some margin between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .Main-container h1 {
+        font-size: 1.5rem; /* Decrease heading size for mobile */
+        margin-bottom: 0.5rem; /* Adjust margin for mobile */
+    }
+
+    .Main-container textarea {
+        font-size: 0.9rem; /* Adjust textarea font size */
+    }
+
+    .btn-container select {
+        font-size: 1rem; /* Adjust select font size */
+    }
+
+    .btn-container button {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 0.4rem 0; /* Adjust padding for buttons */
+    }
 }
