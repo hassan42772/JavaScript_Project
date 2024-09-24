@@ -207,3 +207,92 @@ p{
 .notification_bar.invalid i{
     color: orange;
 }
+/* Existing CSS */
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .button_container {
+      width: 60%;
+      gap: 15px;
+      border-radius: 80px;
+  }
+  .beautiful-button {
+      font-size: 16px;
+      padding: 12px 24px;
+  }
+  .Snake_container {
+      width: 50%;
+      right: 10px;
+  }
+  .notification_bar {
+      width: 95%;
+      font-size: 1rem;
+  }
+}
+
+/* For small tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .button_container {
+      width: 80%;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+  }
+  .beautiful-button {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+  .Snake_container {
+      width: 60%;
+  }
+  .notification_bar {
+      width: 100%;
+      font-size: 0.9rem;
+  }
+}
+
+/* For phones (max-width: 576px) */
+@media (max-width: 576px) {
+  p {
+      font-size: 1.2rem;
+  }
+  .button_container {
+      width: 90%;
+  }
+  .beautiful-button {
+      font-size: 12px;
+      padding: 8px 16px;
+  }
+  .Snake_container {
+      width: 70%;
+      right: 5px;
+  }
+  .notification_bar {
+      width: 100%;
+      font-size: 0.85rem;
+  }
+}
+
+/* For small phones (max-width: 375px) */
+@media (max-width: 375px) {
+  p {
+      font-size: 1rem;
+  }
+  .button_container {
+      width: 100%;
+      gap: 8px;
+  }
+  .beautiful-button {
+      font-size: 11px;
+      padding: 6px 12px;
+  }
+  .Snake_container {
+      width: 80%;
+  }
+  .notification_bar {
+      font-size: 0.8rem;
+  }
+}
