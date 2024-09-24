@@ -169,3 +169,97 @@ button {
     border-radius: 18px;
     color: white;
 }
+
+/* Existing CSS */
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+  .main {
+      width: 70%;
+  }
+  .img_container {
+      width: 400px;
+      height: 350px;
+  }
+  .heading img {
+      width: 60px;
+  }
+  button {
+      width: 100px;
+      height: 38px;
+  }
+  .notes {
+      font-size: 0.9rem;
+  }
+}
+
+/* For small tablets and large phones */
+@media (max-width: 768px) {
+  section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .main {
+      width: 80%;
+  }
+  .img_container {
+      width: 350px;
+      height: 300px;
+  }
+  .heading img {
+      width: 50px;
+  }
+  button {
+      width: 90px;
+      height: 36px;
+      margin-left: 0; /* Centering the button */
+  }
+  .notes {
+      font-size: 0.85rem;
+  }
+}
+
+/* For phones */
+@media (max-width: 576px) {
+  .main {
+      width: 90%;
+  }
+  .img_container {
+      width: 300px;
+      height: 250px;
+  }
+  .heading img {
+      width: 40px;
+  }
+  button {
+      width: 80px;
+      height: 32px;
+  }
+  .notes {
+      font-size: 0.8rem;
+  }
+}
+
+/* For small phones */
+@media (max-width: 375px) {
+  .main {
+      width: 100%;
+  }
+  .img_container {
+      width: 250px;
+      height: 200px;
+  }
+  .heading img {
+      width: 35px;
+  }
+  button {
+      width: 70px;
+      height: 30px;
+  }
+  .notes {
+      font-size: 0.75rem;
+  }
+}
