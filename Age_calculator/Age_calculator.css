@@ -4,24 +4,28 @@
     box-sizing: border-box;
 }
 
-body {
+section{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .main_container {
     width: 50%;
-    min-height: 80vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
+   
+    margin: 0 auto;
+
 }
 
 .main_container .Heading2 {
@@ -115,15 +119,16 @@ span {
 
 .image_container {
     width: 40%;
-    height: 70vh;
+    height: 80vh;
     background-image: url(grand-removebg-preview.png);
+    margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+@media (width < 1200px) {
     .main_container {
         width: 60%;
     }
@@ -133,9 +138,19 @@ span {
     }
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
     .main_container {
-        width: 80%;
+        width: 100%;
+        order: 1;
+        
     }
 
     .image_container {
@@ -150,9 +165,23 @@ span {
     .Calculation_container button {
         width: 90%;
     }
+    .image_container {
+        width: 100%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (width < 480px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .main_container {
+        order: 1;
+        width: 100%;
+    }
     .main_container .Heading1,
     .main_container .Heading2 {
         font-size: 1.5rem;
@@ -172,5 +201,11 @@ span {
 
     .result {
         font-size: 1rem;
+    }
+    .image_container {
+        height: 40vh;
+        width: 100%;
+        order: -1;
+
     }
 }
