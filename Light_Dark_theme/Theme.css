@@ -1,27 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-:root{
+
+:root {
     --primaryDark-color: #212121;
     --secondaryDark-color: #fff;
 }
-.dark-theme{
+
+.dark-theme {
     --primaryDark-color: #fff;
-    --secondaryDark-color:  #212121;
+    --secondaryDark-color: #212121;
 }
-section{
+
+section {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     height: 100vh;
     width: 100%;
     background: var(--primaryDark-color);
 }
 
-section .card{
+section .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,31 +35,31 @@ section .card{
     border-radius: 20px;
     background: var(--secondaryDark-color);
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
-   
 }
-.container h1{
+
+.container h1 {
     color: var(--primaryDark-color);
     font-size: 20px;
     font-weight: bold;
- 
 }
-.card img{
+
+.card img {
     width: 180px;
-    /* height: 200px; */
     border-radius: 10%;
     margin-bottom: 20px;
 }
 
-.card p{
+.card p {
     color: var(--secondaryDark-color);
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.card .show{
+.card .show {
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -67,22 +70,82 @@ section .card{
     cursor: pointer;
 }
 
-.card .mode{
+.card .mode {
     padding: 1px 10px;
     border: none;
     outline: none;
     background-color: transparent;
- 
     color: var(--primaryDark-color);
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
-   
 }
 
-.card .mode i{
+.card .mode i {
     margin-bottom: 13px;
     font-size: 18px;
     color: var(--primaryDark-color);
     background-color: transparent;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    section .card {
+        width: 280px;
+        height: 450px;
+    }
+
+    .card img {
+        width: 160px;
+    }
+
+    .card p, .container h1 {
+        font-size: 18px;
+    }
+
+    .card .show, .card .mode {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    section .card {
+        width: 250px;
+        height: 420px;
+    }
+
+    .card img {
+        width: 140px;
+    }
+
+    .card p, .container h1 {
+        font-size: 16px;
+    }
+
+    .card .show, .card .mode {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+
+    section .card {
+        width: 220px;
+        height: 380px;
+    }
+
+    .card img {
+        width: 120px;
+    }
+
+    .card p, .container h1 {
+        font-size: 14px;
+    }
+
+    .card .show, .card .mode {
+        font-size: 14px;
+    }
 }
