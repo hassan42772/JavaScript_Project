@@ -1,0 +1,213 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100vw;
+    min-height: 100vh;
+    background: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main containers animations */
+.main-container1, .main-container2, .main-container3, 
+.main-container4, .main-container5, .main-container6, 
+.main-container7, .main-container8, .main-container9 {
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    border: none;
+    position: relative;
+    animation: moveDown 5s infinite ease-in-out;
+    animation-play-state: running;
+}
+
+/* Individual timing for animations */
+.main-container2 { animation-duration: 3s; }
+.main-container3 { animation-duration: 5.2s; }
+.main-container5 { animation-duration: 5.4s; }
+.main-container6 { animation-duration: 3s; }
+.main-container7 { animation-duration: 4s; }
+.main-container8 { animation-duration: 3.6s; }
+.main-container9 { animation-duration: 3s; }
+
+/* Keyframes for the animation */
+@keyframes moveDown {
+    0% {
+        transform: translateY(-100%); /* Start from above the viewport */
+    }
+    100% {
+        transform: translateY(100vh); /* End at the bottom of the viewport */
+    }
+}
+
+/* Styles for the floating box */
+.newdiv {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: auto;
+    background: white;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Text and button styling */
+.newdiv h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin: 20px 0;
+}
+
+.newdiv button {
+    padding: 10px 20px;
+    background: #f1356d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.newdiv button:hover {
+    background: #ca9caa00;
+    color: black;
+    border: 1px solid black;
+}
+
+.newdiv p {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}
+
+/* Responsive Styles */
+
+/* For small devices (phones) */
+@media (max-width: 768px) {
+    section {
+        justify-content: space-between;
+        
+    }
+
+    .newdiv {
+        width: 80%;
+        top: 5%;
+        height: auto;
+    }
+
+    .newdiv h1 {
+        font-size: 1.5rem;
+    }
+
+    .newdiv button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .newdiv p {
+        font-size: 1rem;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .newdiv {
+        width: 50%;
+        top: 8%;
+    }
+
+    .newdiv h1 {
+        font-size: 2rem;
+    }
+
+    .newdiv button {
+        font-size: 1.1rem;
+    }
+
+    .newdiv p {
+        font-size: 1.2rem;
+    }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1024px) {
+    .newdiv {
+        width: 30%;
+    }
+
+    .newdiv h1 {
+        font-size: 2.5rem;
+    }
+
+    .newdiv button {
+        font-size: 1.2rem;
+    }
+
+    .newdiv p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (width < 500px) {
+    section {
+        justify-content: space-between;
+        width:400px;
+    }
+    .main-container4{
+        display: none;
+    }
+    .main-container5{
+        display: none;
+    }
+    .main-container6{
+        display: none;
+    }
+    .main-container7{
+        display: none;
+    }
+    .main-container8{
+        display: none;
+    }
+    .main-container9{
+        display: none;
+    }
+
+    .newdiv {
+        width: 200px;
+        top: 5%;
+        height: auto;
+    }
+
+    .newdiv h1 {
+        font-size: 1.5rem;
+    }
+
+    .newdiv button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .newdiv p {
+        font-size: 1rem;
+    }
+}
