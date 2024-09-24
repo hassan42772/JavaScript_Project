@@ -183,8 +183,8 @@ section {
 
 @media (max-width: 480px) {
     .main_frame {
-        width: 90%; /* Full width on mobile devices */
-        height: auto; /* Allow height to adjust */
+        width: 95%; /* Full width on mobile devices */
+       
     }
 
     .part1 h2 {
